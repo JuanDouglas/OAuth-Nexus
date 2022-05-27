@@ -28,4 +28,4 @@ Para inicar a API pela primeira vez é necessário:
 
   [![Rodar no Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/10567804-e51adde7-b8e9-40b2-9e0a-e236f839c5d4?action=collection%2Ffork&collection-url=entityId%3D10567804-e51adde7-b8e9-40b2-9e0a-e236f839c5d4%26entityType%3Dcollection%26workspaceId%3D7eeb276b-b89e-4ae3-af25-94e668ad861e)
 
-> O projeto esta configurado para não iniciar o navegador ao depurar, utilize a **porta 4196** do seu localhost para se conectar ao servidor
+> O projeto esta configurado para não iniciar o navegador ao depurar, utilize a **porta [4196](https://localhost:4196)** do seu localhost para se conectar ao servidor
