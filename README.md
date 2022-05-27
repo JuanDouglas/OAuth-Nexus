@@ -4,9 +4,12 @@ que regulamenta o protocolo de autenticação é autorização usando o mecanism
 
 ## Estrutura do projeto 
 A solução do projeto está divida em duas pastas 
-- Api
+- **Api**
+	
 	Contém ás implementações do sistema OAuth para o servidor de autorização.
-- Client	
+
+- **Client**	
+	
 	Contém os clientes para plataformas como: 
 	- Android 
 	- Linux 
@@ -17,7 +20,7 @@ Para inicar a API pela primeira vez é necessário:
 - Adicionar a chave de conexão corresponde ao seu banco de dados no arquivo 'appsettings.json' dentro do projeto 'Nexus.OAuth.Api'.
 - Rodar a migration dentro do seu servidor com a mesma conexão, para isso rode o seguinte comando no root do projeto:
 	 ``` 
-      dotnet ef database update "{connectionString}" -p Nexus.OAuth.Dal
+      dotnet ef database update --connection "{connectionString}" -p Nexus.OAuth.Dal
 - Caso não tenha o EntityFramework instalado em sua máquina execute esse comando antes do anterior:
    ```
       dotnet tool install dotnet-ef -g
