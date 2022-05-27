@@ -1,0 +1,56 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Material3.DayNight">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+		<item name="android:textViewStyle">@style/TextViewStyle</item>
+		<item name="buttonStyle">@style/AppTheme.Button</item>
+    </style>
+
+	<style name="AppTheme.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<!--on below line we are displaying the windowNotitle as true as we are not displaying our status bar-->
+		<item name="windowNoTitle">true</item>
+		<!--on below line we are adding a window translucent status bar-->
+		<item name="android:windowTranslucentStatus">true</item>
+	</style>
+	
+	<!--add below code in themes.xml file-->
+	<!--below is the style for transparent activity and here we are using no action bar.-->
+	<style name="AppTheme.Translucent" parent="AppTheme.NoActionBar">
+		<!--on below line we are setting background as transparent color-->
+		<item name="android:background">@android:color/transparent</item>
+		<!--on below line we are setting our window background as transparent color-->
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<!--on below line we are setting color background cache hint as null-->
+		<item name="android:colorBackgroundCacheHint">@null</item>
+		<!--on below line we are adding a window translucent as true-->
+		<item name="android:windowIsTranslucent">true</item>
+		<!--on below line we are adding a window animationstyle-->
+		<item name="android:windowAnimationStyle">@android:style/Animation</item>
+	</style>
+
+	<style name="TextViewStyle" parent="android:Widget.TextView">
+		<item name="fontFamily">@font/comfortaa</item>
+	</style>
+
+	<style name="AppTheme.Button" parent="Widget.Material3.Button">
+		<item name="fontFamily">@font/comfortaa</item>
+	</style>
+
+	<style name="AppTheme.Button.TextButton" parent="Widget.Material3.Button.TextButton">
+		<item name="fontFamily">@font/comfortaa</item>
+	</style>
+
+	<style name="AppTheme.Dialog.FullScreen" parent="AlertDialog.AppCompat.Light">
+		<item name="android:backgroundDimEnabled">false</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:padding">0dp</item>
+		<item name="android:windowIsFloating">false</item>
+		<item name="android:windowBackground">@android:drawable/screen_background_dark_transparent</item>
+		<item name="android:windowCloseOnTouchOutside">false</item>
+	</style>
+</resources>

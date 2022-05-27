@@ -1,0 +1,62 @@
+.application {
+    max-width: 19rem;
+    padding: 0.5rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+    .application .icon {
+        width: 150px;
+        height: 150px;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: 10rem;
+        padding: 1rem;
+        background: #c3c3c3;
+        margin: 1.5rem auto;
+    }
+
+    .application img.verified {
+        width: 30px;
+        float: right;
+        top: 0;
+        right: 0;
+        position: absolute;
+        margin: .5rem;
+        cursor: pointer;
+        background: #ddd;
+        padding: .30rem;
+        border-radius: 1rem;
+    }
+
+    .application .details {
+        margin: 0 .75rem;
+    }
+
+        .application .details .name {
+            font-family: 'Heebo Regular';
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .application .details .description {
+            font-family: 'Heebo Regular';
+        }
+
+    .application .buttons {
+        margin: 1rem 1rem;
+    }
+
+        .application .buttons button {
+            min-width: 7rem;
+        }
+
+        .application .buttons .accept {
+            position: relative;
+            float: right;
+        }
+
+        .application .buttons .decline {
+            position: relative;
+            float: left;
+        }

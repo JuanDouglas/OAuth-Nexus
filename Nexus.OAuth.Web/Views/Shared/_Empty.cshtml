@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="@Thread.CurrentThread.CurrentUICulture.ToString()" class="no-js">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#096e54" />
+    <title>@ViewData["Title"] - Nexus</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Nexus.OAuth.Web.styles.css" asp-append-version="true" />
+    <link href="~/font/Heebo/heebo.css" rel="stylesheet" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="is-boxed has-animations">
+    <main class="body-wrap boxed-container content">
+        @RenderBody()
+        <footer class="site-footer has-top-divider">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+                        <a href="#">
+                            <img class="asset-light" src="~/img/logo-light.svg" alt="Logo">
+                            <img class="asset-dark" src="~/img/logo-dark.svg" alt="Logo">
+                        </a>
+                    </div>
+                    <ul class="footer-links list-reset">
+                        <li>
+                            <a href="http://nexus-company.tech">Nexus</a>
+                        </li>
+                        <li>
+                            <a href="~/Home/Contact">Contato</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ's</a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/5561992503344?text=Hello%2C+I%27m+need+support+can+you+help+me%3F%21">Suporte</a>
+                        </li>
+                        <li>
+                            <a href="https://auth.nexus-company.tech/swagger">OAuth</a>
+                        </li>
+                        <li>
+                            <a href="~/Home/Privacy">Privacidade</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-social-links list-reset">
+                        <li>
+                            <a href="https://www.linkedin.com/company/nexuscompany/">
+                                <span class="screen-reader-text">Linkedin</span>
+                                <i class="fa fa-lg fa-linkedin"> </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/company.nexus/">
+                                <span class="screen-reader-text">Instagram</span>
+                                <i class="fa fa-lg fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/5561992503344?text=Hello,%20can%20you%20help%20me%20?!">
+                                <span class="screen-reader-text">Whatsapp</span>
+                                <i class="fa fa-lg fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Twitter</span>
+                                <i class="fa fa-lg fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://docs.nexus-company.tech">
+                                <span class="screen-reader-text">Documentation</span>
+                                <i class="fa fa-lg fa-book"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-copyright">&copy; @DateTime.UtcNow.Year Nexus Company, todos os direitos reservados.</div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="~/js/main.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    @await Html.PartialAsync("_RedirectModal")
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+﻿@using Nexus.OAuth.Web.Models
+@model Login
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_Empty";
+}
+<script src="~/js/Views/authentication.js"></script>
+<body onload="loadQrCode()">
+    <main class="gradient-background" style="text-align:center;padding:5%;">
+        <div class="card-center">
+            <div class="qr-code-component">
+                <img id="qrCode" class="qr-code" src="../img/nexus_crystal.png" />
+                <p class="qr-code-text">Leia esse QR Code no <a class="link" href="https://mobile.nexus-company.tech">Aplicativo da Nexus</a> para um login r&aacute;pido.</p>
+            </div>
+
+            <div>
+                @await Html.PartialAsync("_Loader")
+                <div id="component" class="component" data-redirect="@ViewBag.RedirectTo">
+
+                    <div class="feature-content">
+                        <h3 class="feature-title mt-0">Login</h3>
+                        <p class="text-sm mb-0" id="start-text">
+                            Bem vindo a <a class="link">Nexus Company</a>, entre com seu login e senha ou conecte-se usando o QR Code ao lado.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="User" class="control-label"></label>
+                        <input asp-for="User" class="form-control" placeholder="example@@domain.com" />
+                        <span asp-validation-for="User" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" type="password" class="form-control" placeholder="********" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <button type="button"
+                            class="button button-primary"
+                            onclick="loginClick('@ViewBag.RedirectTo')">
+                        Logar
+                    </button>
+                    <p class="message">N&atilde;o &eacute; registrado? <a onclick="redirectToRegister()">Criar conta</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
